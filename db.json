@@ -1,0 +1,56 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "Abhijeet_Joshi",
+      "email": "Abhijeet.Joshi@waiin.com",
+      "date": "1996-02-12",
+      "country": "India",
+      "avatar": "https://avatars.githubusercontent.com/u/49078472?s=400&u=fb422d84510022e59b6679bb98b09db61337bd78&v=4"
+    },
+    {
+      "id": 13,
+      "name": "Sawarpa",
+      "email": "Swarupa@waiin.com",
+      "date": "1998-02-01",
+      "country": "USA",
+      "avatar": "https://images.onlinelabels.com/images/clip-art/GDJ/Female%20Avatar%20With%20Flower%20In%20Hair-289071.png"
+    },
+    {
+      "id": 16,
+      "name": "Tejas Sadafal",
+      "email": "teju@waiin.com",
+      "date": "1997-01-01",
+      "country": "France",
+      "avatar": "https://cdn2.iconfinder.com/data/icons/modern-avatars/600/myAvatar10-512.png"
+    },
+    {
+      "id": 19,
+      "name": "E sneha Sasane",
+      "email": "sneha.sasane@waiin.com",
+      "date": "1998-08-22",
+      "country": "hongkong",
+      "avatar": "https://i.pinimg.com/originals/df/5f/5b/df5f5b1b174a2b4b6026cc6c8f9395c1.jpg"
+    },
+    {
+      "id": 20,
+      "name": "sanket zambare",
+      "email": "sanketzambare@gmail.com",
+      "date": "2000-01-23",
+      "country": "India",
+      "avatar": "https://cdn4.iconfinder.com/data/icons/professional-avatar-5/48/transcriber_avatar_man_profile_professions-512.png"
+    },
+    {
+      "id": 21,
+      "name": "Prakash",
+      "email": "prakash@gmail.com",
+      "date": "1999-01-23",
+      "country": "Saudi",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkbeHX5-l4XrrWIimOxBDoqlf7tocTpv62fA&usqp=CAU"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

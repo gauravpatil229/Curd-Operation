@@ -1,0 +1,121 @@
+<nav class="navbar navbar-expand-xl navbar-dark bg-info">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
+    <a class="navbar-brand" href="#">DAA_Tech_Emp</a>
+    
+
+      <div class="d-flex">
+          <button  type="button" class="btn btn-success " data-toggle="modal" data-target="#exampleModal" (click)="clickClient_Registration()">Client_Registration</button>
+      </div>
+
+      <!-- <ul class="navbar-nav ">
+          <li class="nav-item mx-md-3">
+            <a class="nav-link disabled" routerLink="home" routerLinkActive="active">Home </a>
+          </li>
+          <li class="nav-item mx-md-3">
+              <a class="nav-link disabled" routerLink="features" routerLinkActive="active" >Features</a>
+          </li>
+
+      </ul> -->
+
+
+  </div>
+</nav>
+<div class="container mt-2">
+  <div class="row">
+    <div class="col-md-12 mt-5">
+      <div class="card1 mb-5 float-left mx-md-2" style="width: 18rem;" *ngFor="let card of employeData"> 
+        <img src="{{card.avatar}}" class="card-img-top" alt="Avatar">
+        <div class="card-body">
+        <h5 class="card-subtitle text-muted">E_ID: {{card.id}}</h5>
+          <p class="card-text">Name :  {{card.name}}</p>
+          <p class="card-text">Email: {{card.email}}</p>  
+          <p class="card-text">BirthDate: {{card.date | date}}</p>
+          <p class="card-text">Country: {{card.country}}</p>
+        </div>
+        <div class="card-body">
+          
+          <button  type="button" class="btn btn-success mr-2 " data-toggle="modal" data-target="#exampleModal" (click)="onEdit(card)">Edit</button>
+            <button type="submit" class="btn btn-danger  mr-2" (click)="deleteEmploye(card)">Delete</button>
+          </div>
+      </div>
+    
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-lg" role="document" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> <marquee width="100%" direction="right"> Welcome to DAA_Tech</marquee></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="border: none;">
+        <div class="card" style="border: none;" >
+          <div class="card-body"  >
+            <h3 class="card-subtitle">Client_Details</h3>
+              <div class="card-body card2 mt-2">
+                   <div class="form-row" [formGroup]="formValue">
+                     <div class="form-group col-md-6">
+                <label for="inputName">Name</label>
+                <input type="text" class="form-control" formControlName="name" id="inputName" placeholder="Name">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputEmail">Email</label>
+                <input type="email" class="form-control" formControlName="email" id="inputEmail" placeholder="Email">
+              </div>
+        </div>
+        <div class="form-row"  [formGroup]="formValue">
+            <div class="form-group col-md-6">
+                <label for="inputDate">Date Of Birth</label>
+                <input type="date" class="form-control" formControlName="date" id="inputDate" placeholder="Date Of Birth">
+            </div>
+            
+            
+            <div class="form-group col-md-6">
+                <label for="inputPassword4">Country</label>
+                <input type="Country" class="form-control" formControlName="country" id="inputCountry" placeholder="Country">
+              </div>
+        </div>
+        <div class="form-row" [formGroup]="formValue">
+            <div class="form-group col-md-12">
+              <div class="mb-3">
+                <label for="InputDate" class="form-label">Avatar</label>
+                <input type="text" formControlName="avatar" class="form-control" id="InputDate">
+
+                <!-- <div class="mb-3">
+                  <label for="formFile" class="form-label">Default file input example</label>
+                  <input class="form-control" formControlName="avatar" type="file" id="formFile">
+                </div> -->
+              </div>
+              
+  
+        </div>
+        <div class="form-row mt-3"  [formGroup]="formValue">
+            <div class="col-md-12">
+                      <button type="button" class="btn btn-secondary mx-md-2" data-dismiss="modal">Close</button>
+                      
+                      <button type="submit" class="btn btn-primary mx-md-2" data-dismiss="modal" *ngIf="showAdd"  (click)="postEmployeDetails()" >Add</button>
+                    <button type="submit" class="btn btn-primary mx-md-2" data-dismiss="modal" *ngIf="showUpdate"  (click)="updateEmployeDetails()">Update</button>
+            </div>
+
+        </div>
+    </div>
+  
+   </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
